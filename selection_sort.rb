@@ -1,7 +1,6 @@
 
 def sort(array)
-    current_pos = 0;
-    while current_pos < array.length
+    0.upto(array.length) do |current_pos|
         i = current_pos + 1
         key = array[current_pos]
         
