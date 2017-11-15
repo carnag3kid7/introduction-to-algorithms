@@ -1,13 +1,9 @@
 def get_majority_element(elements)
-  majority_element = 0
+  majority_element = nil
 
   elements.each do |e|
     occurances = 0
-    elements.each do |i|
-      if i == e
-        occurances += 1
-      end     
-    end
+    occurances = elements.count(e)    
     if occurances > (elements.size / 2)
       majority_element = e
     end 
@@ -16,4 +12,4 @@ def get_majority_element(elements)
   majority_element
 end
 
-puts get_majority_element([1, 1, 1, 3, 3, 3, 1])
+puts get_majority_element([1, 1, 1, 3, 3, 3, 3, 3, 1])
