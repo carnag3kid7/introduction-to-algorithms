@@ -15,4 +15,20 @@ def get_majority_element(array)
   nil
 end
 
-puts get_majority_element([1, 1, 1, 3, 3, 3, 1])
+elements = []
+
+50000.times do
+  elements << rand(0..10)
+end
+
+50001.times do
+  elements << 1
+end
+
+elements.shuffle!
+
+t1 = Time.now
+puts(get_majority_element(elements))
+t2 = Time.now
+
+puts "Execution time #{t2 - t1}ms"

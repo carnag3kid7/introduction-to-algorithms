@@ -37,13 +37,17 @@ def merge(array, start, midpoint, last)
 end
 
 def merge_sort(array, first, last)
-  if first < last 
-    midpoint = ((first + last) / 2).floor 
+  puts "first #{first}"
+  puts "last #{last}"
+
+  if first < last
+    midpoint = ((first + last) / 2).floor
     merge_sort(array, first, midpoint) # divide left
     merge_sort(array, midpoint, last) # divide right
     merge(array, first, midpoint, last)
+  else
+    array
   end
-  puts array
 end
 
 array = [4, 1, 3, 5, 6, 8, 99, 5, 2, 0]
