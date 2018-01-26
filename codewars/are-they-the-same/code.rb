@@ -1,7 +1,6 @@
 def comp(array1, array2)
   return false if array1.nil? || array2.nil?
   elements = Hash.new(false)
-  same = true
   array1.each do |e|
     elements[e ** 2] = true
   end
