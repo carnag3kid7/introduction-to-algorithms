@@ -54,7 +54,8 @@ function fibonacci_recursive_memoized(n) {
 }
 
 if (!process.argv[2] || !process.argv[3]) {
-  console.error('USAGE: node problem2.js <-r|-i|-tr> <number>');
+  console.error('USAGE: node problem2.js <-r|-i|-tr|-rm> <number>\n');
+  console.error('-r: Recursive \n-i: Iterative \n-tr: Tail recursion \n-rm: Recursion with memoization');
   process.exit(-1);
 }
 let startTime;
